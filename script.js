@@ -2,6 +2,7 @@ $(function () {
     let count = 0;
     let pokemons = [];
 
+    //Select all options
     function initTypes() {
         $.get(
             `https://pokeapi.co/api/v2/type/?limit=999`,
@@ -14,11 +15,12 @@ $(function () {
             });
     };
     initTypes();
-
+    //Pokemon list
     function getPokemonsList(limit, offset, handler) {
         $.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`, handler)
     }
 
+    //Information about all pokemons
     function handlePokemonList(data) {
         if (data.results) {
             data.results.forEach(pokemon => {
@@ -26,11 +28,11 @@ $(function () {
                 let name = pokemon.name;
                 getPokemonDetails(pokemonId, (pokemonInf) => {
                     pokemons.push(pokemonInf);
-                
+
                     let pokemonImgUrl = pokemonInf.sprites.front_shiny;
 
                     let template = `<div id="pokemonId_${pokemonId}" class="pokemonPoster">
-                                    <img src="${pokemonImgUrl}" class="image" id="${pokemonId+'_'+name}">
+                                    <img src="${pokemonImgUrl}" class="image" id="${pokemonId + '_' + name}">
                                     <div class="pokemonName">${name}</div>
                                     <div id="pokemonName_${name}" class="pokemonButton"></div> </div>`;
                     $('#pokemonContainer').append(template);
@@ -46,30 +48,32 @@ $(function () {
                         $(`#pokemonName_${name}`).append(template_);
 
                         $(`#${pokemonId + '_' + pokemonTypeName}`).click(pokemonSkills);
-                        $(`#${pokemonId+'_'+name}`).click(pokemonSkills);
+                        $(`#${pokemonId + '_' + name}`).click(pokemonSkills);
                     });
                 })
             });
         }
     };
-
+    //Pokemon ID
     function extractPokemonId(url) {
         let temp = url.split('/');
         return temp[temp.length - 2];
     }
-
+    //Detailed information on id
     function getPokemonDetails(id, handler) {
         $.get(`https://pokeapi.co/api/v2/pokemon/${id}`, handler)
     }
 
     $("#more").click(more);
 
+    //Button Load More
     function more() {
         $('.pokemonPoster').show();
+        $('#typesSelect').val('all');
         count++;
         getPokemonsList(12, count * 12, handlePokemonList);
     }
-
+    //Information about single pokemon
     function pokemonSkills(a) {
         $('.detailsContainer').show();
         let temp = a.target.id;
@@ -90,7 +94,7 @@ $(function () {
         templateDetails += `<div><img src="${pokemon.sprites.front_shiny}" class="imageDetails"></div>
         <div><p class="detailsName">${pokemon.name} #${pokeId}</p></div>`;
         templateDetails += `<table>
-                            <tr><td>${typeArr.length==1 ? 'Type' : 'Types'}</td><td>${typeStr}</td></tr>
+                            <tr><td>${typeArr.length == 1 ? 'Type' : 'Types'}</td><td>${typeStr}</td></tr>
                             <tr><td>Attack</td><td>${pokemon.stats[4].base_stat}</td></tr>
                             <tr><td>Defense</td><td>${pokemon.stats[3].base_stat}</td></tr>
                             <tr><td>HP</td><td>${pokemon.stats[5].base_stat}</td></tr>
@@ -108,6 +112,7 @@ $(function () {
 
     more();
 
+    //Drop-down list
     $('#typesSelect').change(function (u) {
         $('.detailsContainer').hide();
         if (u.target.value === 'all') {
@@ -122,6 +127,7 @@ $(function () {
         }
     })
 
+    //Button Top
     $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('#top').fadeIn();
@@ -133,6 +139,7 @@ $(function () {
         $("html, body").animate({ scrollTop: 0 }, 1000);
     });
 
+    // Button down
     $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('#down').fadeIn();
@@ -140,7 +147,7 @@ $(function () {
             $('#down').fadeOut();
         }
     });
-    $("#down").click(function (){
+    $("#down").click(function () {
         $('html, body').animate({
             scrollTop: $("#more").offset().top
         }, 2000);

@@ -210,7 +210,6 @@ select {
 #top {
     width: 30px;
     height: 30px;
-
     color: #fff;
     border-radius: 5px;
     position: fixed;
@@ -222,7 +221,6 @@ select {
 #down {
     width: 30px;
     height: 30px;
-
     color: #fff;
     border-radius: 5px;
     position: fixed;
