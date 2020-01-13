@@ -25,7 +25,7 @@ So, we get the following result
 
 ![img5](img/img_5.png)
 
-+ To quickly return to the beginning of the page, in the lower right corner there is a button ***'Top'***, when you press the page scroll up
++ To quickly return to the beginning or to the bottom of the page, there are ***'Top'*** and ***'Down'*** buttons on the right side of the page, respectively.
 
 ![img6](img/img_6.png)
 

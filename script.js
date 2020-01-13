@@ -132,4 +132,17 @@ $(function () {
     $("#top").click(function () {
         $("html, body").animate({ scrollTop: 0 }, 1000);
     });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop()) {
+            $('#down').fadeIn();
+        } else {
+            $('#down').fadeOut();
+        }
+    });
+    $("#down").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#more").offset().top
+        }, 2000);
+    });
 });
