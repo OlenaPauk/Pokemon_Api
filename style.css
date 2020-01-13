@@ -239,4 +239,7 @@ select {
     #more {
         margin: 2% 28%;
     }
+    .selectPokemon {
+        margin: 10px 40%;
+    }
 }
