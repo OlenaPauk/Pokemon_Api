@@ -1,5 +1,5 @@
 # Pokemon Api
-The page displays information about Pokémon.;
+ The page displays information about Pokémon. 
 Information on all Pokémon is available via the link
 
 
