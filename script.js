@@ -21,24 +21,23 @@ $(function () {
 
     function handlePokemonList(data) {
         if (data.results) {
-
             data.results.forEach(pokemon => {
                 let pokemonId = extractPokemonId(pokemon.url);
                 let name = pokemon.name;
-
                 getPokemonDetails(pokemonId, (pokemonInf) => {
                     pokemons.push(pokemonInf);
-
+                
                     let pokemonImgUrl = pokemonInf.sprites.front_shiny;
 
                     let template = `<div id="pokemonId_${pokemonId}" class="pokemonPoster">
-                                    <img src="${pokemonImgUrl}" class="image">
+                                    <img src="${pokemonImgUrl}" class="image" id="${pokemonId+'_'+name}">
                                     <div class="pokemonName">${name}</div>
                                     <div id="pokemonName_${name}" class="pokemonButton"></div> </div>`;
                     $('#pokemonContainer').append(template);
 
                     pokemonInf.types.forEach(typePokemon => {
                         let pokemonTypeName = typePokemon.type.name;
+
                         let template_ = `<input 
                             id="${pokemonId + '_' + pokemonTypeName}"
                             type="button" 
@@ -47,6 +46,7 @@ $(function () {
                         $(`#pokemonName_${name}`).append(template_);
 
                         $(`#${pokemonId + '_' + pokemonTypeName}`).click(pokemonSkills);
+                        $(`#${pokemonId+'_'+name}`).click(pokemonSkills);
                     });
                 })
             });
@@ -77,11 +77,22 @@ $(function () {
         let pokeType = temp.split("_")[1];
 
         let pokemon = pokemons.find(el => el.id == pokeId);
+
+        let typeArr = [];
+        pokemon.types.forEach(typeP => {
+            let typeName = typeP.type.name;
+            typeArr.push(typeName);
+        })
+
+        let typeStr = typeArr.join(',');
+        console.log(typeStr);
+
+
         let templateDetails = `<div class="detailsSkillsPoke">`;
         templateDetails += `<div><img src="${pokemon.sprites.front_shiny}" class="imageDetails"></div>
         <div><p class="detailsName">${pokemon.name} #${pokeId}</p></div>`;
         templateDetails += `<table>
-                            <tr><td>Type</td><td>${pokeType}</td></tr>
+                            <tr><td>Type</td><td>${typeStr}</td></tr>
                             <tr><td>Attack</td><td>${pokemon.stats[4].base_stat}</td></tr>
                             <tr><td>Defense</td><td>${pokemon.stats[3].base_stat}</td></tr>
                             <tr><td>HP</td><td>${pokemon.stats[5].base_stat}</td></tr>
@@ -90,7 +101,6 @@ $(function () {
                             <tr><td>Speed</td><td>${pokemon.stats[0].base_stat}</td></tr>
                             <tr><td>Weight</td><td>${pokemon.weight}</td></tr>
                             <tr><td>Total moves</td><td>${pokemon.moves.length}</td></tr>`;
-
         templateDetails += `</table>`;
 
         templateDetails += `</div>`
@@ -113,8 +123,8 @@ $(function () {
             });
         }
     })
-    
-    $(window).scroll(function() {
+
+    $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('#top').fadeIn();
         } else {
@@ -122,7 +132,6 @@ $(function () {
         }
     });
     $("#top").click(function () {
-       $("html, body").animate({scrollTop: 0}, 1000);
+        $("html, body").animate({ scrollTop: 0 }, 1000);
     });
-
 });
