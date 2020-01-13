@@ -13,6 +13,8 @@ Information on all Pokémon is available via the link [pokeapi](https://pokeapi.
 
 ![img2](img/img_2.png)
 
+So, we get the following result
+
 ![img3](img/img_3.png)
 
 + In order to obtain detailed information about a particular Pokémon, you must click on the Pokémon image or the button corresponding to the type of attack
