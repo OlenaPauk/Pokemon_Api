@@ -11,7 +11,7 @@ Information on all Pokémon is available via the link [pokeapi](https://pokeapi.
 
 + After clicking on the drop-down list, the user can choose which type of Pokemon to display on the page(fire,normal etc) 
 
-![img2](img/img_2.png)
+![img2](img/img_2_1.png)
 
 ![img3](img/img_3.png)
 
