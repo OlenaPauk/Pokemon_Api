@@ -19,11 +19,11 @@ Information on all Pokémon is available via the link [pokeapi](https://pokeapi.
 
 ![img4](img/img_4.png)
 
-+ If you want to display more Pokémon on the page, you need to click the button *** 'Load More' ***. After that, some more new Pokémon will appear on the page
++ If you want to display more Pokémon on the page, you need to click the button ***'Load More'***. After that, some more new Pokémon will appear on the page
 
 ![img5](img/img_5.png)
 
-+ To quickly return to the beginning of the page, in the lower right corner there is a button *** 'Top' ***, when you press the page scroll up
++ To quickly return to the beginning of the page, in the lower right corner there is a button ***'Top'***, when you press the page scroll up
 
 ![img6](img/img_6.png)
 
