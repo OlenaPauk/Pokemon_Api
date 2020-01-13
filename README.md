@@ -7,7 +7,7 @@ Information on all Pokémon is available via the link [pokeapi](https://pokeapi.
 
 + When you load a page, you will see 12 different Pokémon that can be accessed from the link [AllPokemon](https://pokeapi.co/api/v2/pokemon):
 
-![img1](img/img1.png)
+![img1](img/img_1.png)
 
 
 
