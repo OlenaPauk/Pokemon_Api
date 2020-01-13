@@ -33,6 +33,7 @@ So, we get the following result
 
 ![img7](img/img_7.png)
 ![img8](img/img_8.png)
+![img9](img/img_9.png)
 ## The page view is available via the link
 
 [PokemonApi](https://olenapauk.github.io/Pokemon_Api/)
