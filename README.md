@@ -29,6 +29,10 @@ So, we get the following result
 
 ![img6](img/img_6.png)
 
++ This page has a responsive design, so it will be easy to use on your mobile phone or tablet.
+
+![img7](img/img_7.png)
+![img8](img/img_8.png)
 ## The page view is available via the link
 
 [PokemonApi](https://olenapauk.github.io/Pokemon_Api/)
