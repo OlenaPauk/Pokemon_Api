@@ -1,2 +1,2 @@
-# Pokemon_Api
+# Pokemon Api
 https://olenapauk.github.io/Pokemon_Api/
