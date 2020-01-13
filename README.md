@@ -1,31 +1,31 @@
-# Pokemon Api
-The page displays information about Pokémon. 
+# Poke wiki
+On this page You can find information about all Pokémons.
 
-Information on all Pokémon is available via the link [pokeapi](https://pokeapi.co/docs/v2.html).
+Poke API [link](https://pokeapi.co/docs/v2.html) provides simple API for pokemons seach, pokemons info, etc.
 
-## The page is accessible to the user: ##
+# Application description 
 
-+ When you load a page, you will see 12 different Pokémon that can be accessed from the link [AllPokemon](https://pokeapi.co/api/v2/pokemon):
++ For pokemons list we use APi url: https://pokeapi.co/api/v2/pokemon?limit=12&offset=1 were limit end offset are selecting parameters. By default we select 12 Pokémons.
 
 ![img1](img/img_1.png)
 
-+ After clicking on the drop-down list, the user can choose which type of Pokemon to display on the page(fire,normal etc) 
++ Filtering by pokemon type display only selected type pokemons for all loaded before.
 
 ![img2](img/img_2.png)
 
-So, we get the following result
+Filtered pokemons 
 
 ![img3](img/img_3.png)
 
-+ In order to obtain detailed information about a particular Pokémon, you must click on the Pokémon image or the button corresponding to the type of attack
++ To see pokemon info just click on pokemon
 
 ![img4](img/img_4.png)
 
-+ If you want to display more Pokémon on the page, you need to click the button ***'Load More'***. After that, some more new Pokémon will appear on the page
++ For load more Pokémon on the page, you can to click the button ***'Load More'***
 
 ![img5](img/img_5.png)
 
-+ To quickly return to the beginning or to the bottom of the page, there are ***'Top'*** and ***'Down'*** buttons on the right side of the page, respectively.
++ ***'Top'*** and ***'Down'*** buttons.
 
 ![img6](img/img_6.png)
 
@@ -34,9 +34,9 @@ So, we get the following result
 ![img7](img/img_7.png)
 ![img8](img/img_8.png)
 ![img9](img/img_9.png)
-## The page view is available via the link
 
-[PokemonApi](https://olenapauk.github.io/Pokemon_Api/)
+## Demo page by
+[Link](https://olenapauk.github.io/Pokemon_Api/)
 
 
 

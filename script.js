@@ -32,7 +32,7 @@ $(function () {
                     let pokemonImgUrl = pokemonInf.sprites.front_shiny;
 
                     let template = `<div id="pokemonId_${pokemonId}" class="pokemonPoster">
-                                    <img src="${pokemonImgUrl}" class="image" id="${pokemonId + '_' + name}">
+                                    <img src="${pokemonImgUrl}" class="image" id="pokemonId_${pokemonId + '_' + name}">
                                     <div class="pokemonName">${name}</div>
                                     <div id="pokemonName_${name}" class="pokemonButton"></div> </div>`;
                     $('#pokemonContainer').append(template);
@@ -41,15 +41,14 @@ $(function () {
                         let pokemonTypeName = typePokemon.type.name;
 
                         let template_ = `<input 
-                            id="${pokemonId + '_' + pokemonTypeName}"
+                            id="pokemonId_${pokemonId + '_' + pokemonTypeName}"
                             type="button" 
                             class="${pokemonTypeName}Type type" 
                             value="${pokemonTypeName === 'unknown' ? '???' : pokemonTypeName}"></input>`;
-                        $(`#pokemonName_${name}`).append(template_);
-
-                        $(`#${pokemonId + '_' + pokemonTypeName}`).click(pokemonSkills);
-                        $(`#${pokemonId + '_' + name}`).click(pokemonSkills);
+                        $(`#pokemonName_${name}`).append(template_);                        
                     });
+
+                    $(`#pokemonId_${pokemonId}`).click(pokemonSkills);
                 })
             });
         }
@@ -77,8 +76,7 @@ $(function () {
     function pokemonSkills(a) {
         $('.detailsContainer').show();
         let temp = a.target.id;
-        let pokeId = temp.split("_")[0];
-        let pokeType = temp.split("_")[1];
+        let pokeId = temp.split("_")[1];
 
         let pokemon = pokemons.find(el => el.id == pokeId);
 
