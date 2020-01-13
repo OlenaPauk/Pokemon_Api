@@ -159,6 +159,10 @@ table {
     border-spacing: 0;
     text-align: center;
 }
+td{
+    height:25px;
+    line-height: 25px;
+}
 
 #more {
     width: 44%;

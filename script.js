@@ -85,14 +85,12 @@ $(function () {
         })
 
         let typeStr = typeArr.join(',');
-        console.log(typeStr);
-
 
         let templateDetails = `<div class="detailsSkillsPoke">`;
         templateDetails += `<div><img src="${pokemon.sprites.front_shiny}" class="imageDetails"></div>
         <div><p class="detailsName">${pokemon.name} #${pokeId}</p></div>`;
         templateDetails += `<table>
-                            <tr><td>Type</td><td>${typeStr}</td></tr>
+                            <tr><td>${typeArr.length==1 ? 'Type' : 'Types'}</td><td>${typeStr}</td></tr>
                             <tr><td>Attack</td><td>${pokemon.stats[4].base_stat}</td></tr>
                             <tr><td>Defense</td><td>${pokemon.stats[3].base_stat}</td></tr>
                             <tr><td>HP</td><td>${pokemon.stats[5].base_stat}</td></tr>
