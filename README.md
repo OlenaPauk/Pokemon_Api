@@ -25,11 +25,11 @@ Filtered Pokémons.
 
 ![img5](img/img_5.png)
 
-+ ***'Top'*** and ***'Down'*** buttons. On your phone or tablet, detailed info about the Pokémon is after ***'Load More'*** button, use ***'Down'*** button to scroll page to the Pokémon info.
++ ***'Top'*** and ***'Down'*** buttons. 
 
 ![img6](img/img_6.png)
 
-+ This page has a responsive design, so it will be easy to use on your mobile phone or tablet.
++ This page has a responsive design, so it will be easy to use on your mobile phone or tablet. Detailed info about the Pokémon is after ***'Load More'*** button, use ***'Down'*** button to scroll page to the Pokémon info.
 
 ![img7](img/img_7.png)
 ![img8](img/img_8.png)
