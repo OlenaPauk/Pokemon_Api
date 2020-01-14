@@ -17,7 +17,7 @@ Filtered Pokémons.
 
 ![img3](img/img_3.png)
 
-+ To see pokemon info just click on pokemon.
++ To see Pokémon info just click on Pokémon.
 
 ![img4](img/img_4.png)
 
@@ -25,7 +25,7 @@ Filtered Pokémons.
 
 ![img5](img/img_5.png)
 
-+ ***'Top'*** and ***'Down'*** buttons.
++ ***'Top'*** and ***'Down'*** buttons. On your phone or tablet, detailed info about the Pokémon is after ***'Load More'*** button, use ***'Down'*** button to scroll page to the Pokémon info.
 
 ![img6](img/img_6.png)
 
