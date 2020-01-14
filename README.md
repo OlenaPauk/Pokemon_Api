@@ -5,23 +5,23 @@ Poke API [link](https://pokeapi.co/docs/v2.html) provides simple API for pokemon
 
 # Application description 
 
-+ For pokemons list we use APi url: https://pokeapi.co/api/v2/pokemon?limit=12&offset=1 were limit end offset are selecting parameters. By default we select 12 Pokémons.
++ For Pokémons list we use APi url: https://pokeapi.co/api/v2/pokemon?limit=12&offset=1 were limit end offset are selecting parameters. By default we select 12 Pokémons.
 
 ![img1](img/img_1.png)
 
-+ Filtering by pokemon type display only selected type pokemons for all loaded before.
++ Filtering by Pokémons type display only selected type Pokémons for all loaded before.
 
 ![img2](img/img_2.png)
 
-Filtered pokemons 
+Filtered Pokémons.
 
 ![img3](img/img_3.png)
 
-+ To see pokemon info just click on pokemon
++ To see pokemon info just click on pokemon.
 
 ![img4](img/img_4.png)
 
-+ For load more Pokémon on the page, you can to click the button ***'Load More'***
++ For load more Pokémons on the page, you can to click the button ***'Load More'***.
 
 ![img5](img/img_5.png)
 
