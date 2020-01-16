@@ -1,5 +1,5 @@
 $(function () {
-    let count = -1;
+    let count = 0;
     let pokemons = [];
 
     //Select all options
