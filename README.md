@@ -35,7 +35,7 @@ Filtered Pokémons.
 ![img8](img/img_8.png)
 ![img9](img/img_9.png)
 
-## [Demo page by](https://olenapauk.github.io/Pokemon_Api/)
+## [Demo page](https://olenapauk.github.io/Pokemon_Api/)
 
 
 
